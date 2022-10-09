@@ -117,3 +117,63 @@
         opacity: 0;
     }
 }
+
+.hamburger {
+    background-color: #111;
+    width: 20px;
+    height: 2px;
+}
+
+.hamburger::after,
+.hamburger::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background-color: #111;
+    width: 20px;
+    height: 2px;
+}
+
+.hamburger::before {
+    top: 10px;
+}
+
+.hamburger::after {
+    top: 5px;
+}
+
+.ham-after::after {
+    transition: width .6s ease;
+    width: 0;
+}
+
+.ham-after,
+.ham-after::before {
+    transition: transform .5s ease;
+}
+
+.ham-after {
+    transform: rotate(45deg);
+}
+
+.ham-after::before {
+    transform: rotate(270deg) translate(10px);
+}
+
+.p-rel {
+    position: absolute;
+    top: 20px;
+    width: 21px;
+    height: 12px;
+}
+
+.ham-before::after {
+    transition: width .6s ease;
+    width: 20px;
+}
+
+.ham-before,
+.ham-before::before {
+    transition: transform .5s ease;
+    transform: rotate(0) translate(0);
+}
