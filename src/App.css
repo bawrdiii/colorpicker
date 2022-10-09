@@ -54,3 +54,66 @@
     cursor: pointer;
     outline: none;
 }
+
+.v-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s linear, visibility .4s linear;
+}
+
+.v-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn {
+    outline: none;
+    width: 55px;
+    height: 23px;
+    letter-spacing: 1.5px;
+    border: 1px solid #355acb;
+    border-radius: 10px 5px;
+    transition: all .5s linear;
+    background-color: #355acb;
+    color: #fafafa;
+}
+
+.btn:hover {
+    color: #111;
+    background-color: transparent;
+    border-color: #111;
+    cursor: pointer;
+}
+
+.alert {
+    display: inline-block;
+    margin-top: .7em;
+    text-align: center;
+    background: linear-gradient(to right, #36a8bf, #1fb78a);
+    width: 70px;
+    border-radius: 6px;
+    height: 25px;
+    color: #f1f1f1;
+    transition: all .5s linear;
+}
+
+.alert-after {
+    visibility: visible;
+    opacity: 1;
+    animation: copied 6s ease forwards;
+}
+
+@keyframes copied {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(245%);
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
